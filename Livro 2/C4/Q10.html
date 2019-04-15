@@ -1,0 +1,35 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 10</title>
+</head>
+<body>
+	<script>
+		var cf = parseFloat(prompt("Informe o custo de fábrica do carro."));
+		var dist = 0;
+		var imp = 0;
+		var r = cf + dist + imp;
+
+		if (cf <= 12000)
+		{
+			dist = (5 / 100) * cf;
+		} 
+
+		else if (cf > 12000 && cf <= 25000)
+		{
+			dist = (10 / 100) * cf;
+			imp = (15 / 100) * cf;
+		}
+
+		if (cf > 25000)
+		{
+			dist = (15 / 100) * cf;
+			imp = (20 / 100) * cf;
+		}
+
+		document.write ("O seu carro sairá por R$ " + r);
+	</script>
+
+</body>
+</html>

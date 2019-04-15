@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 23</title>
+</head>
+<body>
+	<script>
+		var c = parseInt(prompt("Informe o código do produto"));
+		var q = parseInt(prompt("Informe a quantidade comprada do produto"));
+		var pu;
+		var pt = pu * q;
+		var vd;
+		var pf = pt - vd;
+
+		if (c >= 1 && c <= 10)
+		{
+			pu = 10;
+		}
+		if (c >= 11 && c <= 20)
+		{
+			pu = 15;
+		}
+		if (c >= 21 && c <= 30)
+		{
+			pu = 20;
+		}
+		if (c >= 31 && c <= 40)
+		{
+			pu = 30;
+		}
+
+		if (pt <= 250)
+		{
+			vd = (5 / 100) * pt;
+		}
+		if (pt > 250 && pt <= 500)
+		{
+			vd = (10 / 100) * pt;
+		}
+		if (pt > 500)
+		{
+			vd = (15 / 100) * pt;
+		}
+
+		document.write("O preço unitário do produto comprado é R$ " + pu + "<br>");
+		document.write("O preço total da nota é R$ " + pt + "<br>");
+		document.write("O valor do desconto é R$ " + vd + "<br>");
+		document.write("O preço final da nota depois do desconto é R$ " + pf);
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

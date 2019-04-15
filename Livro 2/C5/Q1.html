@@ -1,0 +1,82 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 1</title>
+</head>
+<body>
+	<script>
+		function cres (arr)
+		{
+			var length = arr.length;
+			for (var i = length-1; i >= 0; i--)
+			{
+				for(var j = 1; j <= i; j++)
+				{
+					if (arr[j-1] > arr[j])
+					{
+						var temp = arr[j-1];
+						arr[j-1] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			return arr;
+		}
+		function dec (arr)
+		{
+			var length = arr.length;
+			for (var i = length-1; i >= 0; i--)
+			{
+				for(var j = 1; j <= i; j++)
+				{
+					if (arr[j-1] < arr[j])
+					{
+						var temp = arr[j-1];
+						arr[j-1] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+			return arr;
+		}
+		var g = [];
+		var aux = [];
+		var c = [];
+		var d = [];
+		for (var i = 0; i < 5; i++)
+		{
+			g[i] = [];
+				for(var j = 0; j < 4; j++)
+				{
+					g[i][j] = parseFloat(prompt("Digite o número " + (j + 1) + " do grupo " + (i + 1)));
+					aux[j] = g[i][j];
+				}
+			
+		}
+
+		document.write("Ordem lida: " + "<br>");
+
+		for (var i = 0; i < 5; i++)
+		{
+			
+			document.write("Grupo " + (i + 1) + " = " + g[i] + "<br>");
+		}
+
+		document.write("Ordem crescente: " + "<br>");
+
+		for (var i = 0; i < 5; i++)
+		{
+			
+			document.write("Grupo " + (i + 1) + " = " + cres(g[i]) + "<br>")
+		}
+
+		document.write("Ordem decrescente: " + "<br>");
+
+		for (var i = 0; i < 5; i++)
+		{
+			document.write("Grupo " + (i + 1) + " = " + dec(g[i]) + "<br>")
+		}
+	</script>
+</body>
+</html>

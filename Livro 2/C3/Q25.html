@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 25</title>
+</head>
+<body>
+	<script>
+		function print(frase)
+		{
+			document.write(frase + " <br> ");
+		}
+		var h = parseInt(prompt("Olá, preciso que insira a hora nesse pop-up e os minutos no pop-up seguinte."));
+		var m = parseInt(prompt("Insira os minutos."));
+
+		var htm = h * 60;
+		var tm = m + htm;
+		var tmts = tm * 60
+
+		print("A hora digitada convertida em minutos é " + htm);
+		print("O total dos minutos é " + tm);
+		print("O total dos minutos convertidos em segundos é " + tmts);
+
+
+	</script>
+
+</body>
+</html>

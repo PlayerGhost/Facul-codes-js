@@ -1,0 +1,29 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 14</title>
+</head>
+<body>
+	<script>
+		
+
+		var an = parseInt(prompt("Em que ano você nasceu?"));
+		var aa = parseInt(prompt("Em que nao estamos?"));
+		var c = [12, 365, 52.143]
+		var cc = [" meses ", " dias ", " semanas "];
+		var a = aa - an; 
+		document.write("Sua idade é: " + a + " anos." + "<br>");
+
+		for(i = 0; i < c.length; i++)
+			{
+				var cal = a * c[i];
+				document.write("Sua idade é: " + cal + cc[i] + " <br> ");
+			}
+
+
+
+	</script>
+
+</body>
+</html>

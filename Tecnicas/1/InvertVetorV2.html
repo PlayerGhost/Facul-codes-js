@@ -1,0 +1,18 @@
+<script>
+
+var vet = [7, 3, 1, 5, 8, 6, 4];
+
+alert (vet);
+
+var length = vet.length;
+var left;
+var right;
+
+for (left = 0, right = length - 1; left < right; left =+ 1, right -= 1) {
+	var temp = vet[left];
+	vet[left] = vet[right];
+	vet[right] = temp;
+}
+alert (vet);
+
+</script>

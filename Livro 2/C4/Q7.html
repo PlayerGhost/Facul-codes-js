@@ -1,0 +1,24 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 7</title>
+</head>
+<body>
+	<script>
+		var s = parseFloat(prompt("Informe o valor do seu salário"));
+		if(s <= 500)
+		{
+			var r = 30 / 100 * s;
+			var sf = s + r;
+			document.write("O seu salário reajustado será de R$ " + sf);
+		}
+		else
+		{
+			document.write("Você não tem direito a reajuste");
+		}
+		
+	</script>
+
+</body>
+</html>

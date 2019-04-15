@@ -1,0 +1,26 @@
+<script>
+
+var n = prompt("Insira o número de notas:");
+var x = new Array(101);
+var nota;
+
+for (var i = 0; i < x.length; i++)
+{
+	x[i] = 0;
+}
+
+for (var i = 1; i <= n; i++)
+{
+	nota = prompt("Insira a nota No " + i + ":");
+	x[nota]= x[nota] + 1;
+}
+
+for (var i = 0; i < x.length; i++)
+{
+	if (x[i] != 0)
+	{
+		document.write("Nota: " + i + " - Quantidade: " + x[i] + "<br>");
+	}
+}
+
+</script>

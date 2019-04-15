@@ -1,0 +1,31 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 8</title>
+</head>
+<body>
+	<script>
+		function print (frase)
+		{
+			document.write(frase + "<br");
+		}
+		var s = parseFloat(prompt("Informe o seu salário"));
+		var r;
+		var sf
+		if (s <= 300)
+		{
+			r = 35 / 100 * s;
+			sf = r + s;
+			print("O seu salário reajustado é R$ " + sf);
+		}
+		else if (s > 300)
+		{
+			r = 15 / 100 * s;
+			sf = r + s;
+			print("O seu salário reajustado é R$ " + sf);
+		}
+	</script>
+
+</body>
+</html>

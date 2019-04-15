@@ -1,0 +1,27 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 16</title>
+</head>
+<body>
+	<script>
+		var t = prompt("Informe o tipo de investimeento. Sendo que: 1 - Poupança e 2 - Fundos de renda fixa");
+		var v = parseFloat(prompt("Informe o valor do investimento"));
+		var vc
+		if (t == 1)
+		{
+			vc = v + ((3 / 100) * v);
+		}
+		else if (t == 2)
+		{
+			vc = v + ((4 / 100) * v);
+		}
+
+		document.write("O valor corrigido é R$ " + vc);
+
+
+	</script>
+
+</body>
+</html>

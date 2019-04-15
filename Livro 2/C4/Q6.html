@@ -1,0 +1,42 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 6</title>
+</head>
+<body>
+	<script>
+		var n = [];
+		var r;
+		var aux
+		for (var i = 0; i < 2; i++)
+		{
+			n[i] = parseFloat(prompt("Informe um número."));
+		}
+		var c = prompt("Escolha um operação a ser executada, as opçõesd são (A - O primeiro número elevado ao segundo número. /  B - Raiz quadrada de cada um dos números. / C - Raiz cúbica de cada um dos números.");
+		if(c == "A")
+		{
+			r = Math.pow(n[0], n[1]);
+			document.write("O resultado é " + r);
+		}
+		else if(c == "B")
+		{
+			r = Math.sqrt(n[0]);
+			aux = Math.sqrt(n[1]);
+			document.write("O resultado é " + r + " e " + aux);
+		}
+		else if(c == "C")
+		{
+			r = Math.cbrt(n[0]);
+			aux = Math.cbrt(n[1]);
+			document.write("O resultado é " + r + " e " + aux);
+		}
+		else
+		{
+			alert("Você inseriu uma opção inválida, tente novamente");
+		}
+		
+	</script>
+
+</body>
+</html>

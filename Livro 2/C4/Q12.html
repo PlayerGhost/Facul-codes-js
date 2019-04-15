@@ -1,0 +1,39 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 12</title>
+</head>
+<body>
+	<script>
+		var sb = parseFloat(prompt("Informe o seu salário bruto"));
+		var i = 7 / 100;
+		var s;
+		var g;
+		var sf;
+
+		if (sb <= 350)
+		{
+			g = 100;
+		}
+		else if ( sb > 350 && sb <= 600)
+		{
+			g = 75;
+		}
+
+		if (sb > 600 && sb <= 900)
+		{
+			g = 50;
+		}
+		else if (sb > 900)
+		{
+			g = 35;
+		}
+		s = sb + g;
+		sf = s - (s * i);
+
+		document.write(" O valor a receber será de R$ " + sf);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 5</title>
+</head>
+<body>
+	<script>
+		function print (frase)
+		{
+			document.write(frase + "<br");
+		}
+		var x = parseInt(prompt("Insira o primeiro número."));
+		var y = parseInt(prompt("Informe o segundo númeoro"));
+		var a = prompt("Qual ação você quer que seja executada? 1, 2, 3 ou 4?");
+		var m, d, p, dv;
+		if (a != 1 && a != 2 && a != 3 && a != 4)
+		{
+			print("Apenas ações dentre 1, 2, 3 e 4 são permtidas");
+		}
+		else if(a == 1 || a == 2 || a == 3 || a == 4)
+		{
+			if (a == 1)
+			{
+				m = x + y / 2;
+				print("A média entre os números digitados é " + m);
+			}
+			else if (a == 2)
+		
+			if(x >= y)
+			{
+				d = x - y;
+				print("A diferença do maior pelo menor é " + d);
+			}
+			else if (y >= x)
+			{
+				d = y - x;
+				print("A diferença do maior pelo menor é " + d);
+			}
+		}
+		if (a == 3)
+		{
+			p = x * y;
+			print("O produto entre os números digitados é " + p);
+		}
+		else if (a == 4)
+		{
+			dv = x / y;
+			print("A divisão do primeiro pelo segundo é " + dv);
+		}
+
+	</script>
+
+</body>
+</html>

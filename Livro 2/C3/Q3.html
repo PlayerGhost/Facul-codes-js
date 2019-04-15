@@ -1,0 +1,22 @@
+<script>
+var x = [ ];
+var y = ["primeiro", "segundo"];
+
+for(var i = 0; i <= 1; i++)
+{
+	x[i] = prompt("Insira o " +  y[i] + " número.  Nota: O segundo número não pode ser 0. ");
+}
+
+
+if(x[1] <= 0)
+{
+	alert("O segundo número não pode ser nagativo.");
+} 
+else (x[1] > 0)
+{
+	var r = x[0] / x[1];
+	document.write("O resultado é: " + r);
+}
+
+
+</script>

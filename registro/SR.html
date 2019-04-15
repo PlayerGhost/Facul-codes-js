@@ -1,0 +1,39 @@
+<script>
+
+
+function edit (a, b, c)
+{
+	p.descrição = prompt("Informe a nova descrição do produto.");
+	p.valor_unit = parseInt(prompt("Insira o novo valor do produto unitario."));
+	p.quantidade = parseInt(prompt("Informe a nova quantidade do produto."));
+}
+
+var p = new Array (50);
+
+for ( var i = 0; i > p.length; i++)
+{
+	p[i] = {
+		codigo : parseInt(prompt("Informe o código do produto.")),
+		descricao : prompt("Informe a descrição do produto."),
+		valor_unit : parseInt(prompt("Informe o valor unitario do produto.")),
+		quantidade : parseInt(prompt("Informe a qauntidade em estoque do produto."))
+	}
+}
+
+p.sort (function (a, b)
+{
+	if (a.codigo > b.codigo)
+	{
+		return 1;
+	}
+	if (a.codigo < b.codigo)
+	{
+		return -1;
+	}
+	return 0;
+})
+
+
+
+
+</script>

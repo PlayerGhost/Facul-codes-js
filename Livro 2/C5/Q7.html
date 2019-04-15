@@ -1,0 +1,50 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 7</title>
+</head>
+<body>
+	<script>
+		var age = [];
+		var a = [];
+		var p = [];
+		var c = 0;
+		var c0 = 0;
+		var c1 = 0;
+		var aux = 0;
+		var ma = aux / c0;
+		var pp = c1 / 5 * 100;
+
+		for (i = 0; i < 5; i++)
+		{
+			age[i] = parseInt(prompt("Informe a sua idade."));
+			a[i] = parseFloat(prompt("Informe a sua altura."));
+			p[i] = parseFloat(prompt("Informe o seu peso."));
+
+			if (age[i] > 50)
+			{
+				c++;
+			}
+			else if (age[i] >= 10 && age[i] <= 20)
+			{
+				c0++;
+				aux += a[i]; 
+			}
+			else if (p[i] < 40)
+			{
+				c1++;
+			}
+		}
+
+		document.write("A quantidade de pessoas com idade superior a 50 anos é " + c + "<br");
+		document.write("A média das alturas das pessoas com idade entre 10 e 20 anos é " + ma + "<br");
+		document.write("A porcentagem de pessoas com peso inferior a 40 kg entre todas as pessoas analisadas é " + pp + "<br");
+
+
+
+		
+	</script>
+
+</body>
+</html>

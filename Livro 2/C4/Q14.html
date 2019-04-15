@@ -1,0 +1,42 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 14</title>
+</head>
+<body>
+	<script>
+		var s = parseFloat(prompt("Informe o seu salário."));
+		var ns;
+
+		if (s <= 300)
+		{
+			ns = s + ((50 / 100) * s);
+		}
+		else if (s > 300 && s <= 500)
+		{
+			ns = s + ((40 / 100) * s);
+		}
+		else if (s > 500 && s <= 700)
+		{
+			ns = s + ((30 / 100) * s);
+		}
+		else if (s > 700 && s <= 800)
+		{
+			ns = s + ((20 / 100) * s);
+		}
+		else if (s > 800 && s <= 1000)
+		{
+			ns = s + ((10 / 100) * s);
+		}
+		else
+		{
+			ns = s + ((5 / 100) * s);
+		}
+		
+		document.write("O seu novo salário é de R$ " + ns);
+
+	</script>
+
+</body>
+</html>

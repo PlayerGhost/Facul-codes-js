@@ -1,0 +1,31 @@
+<script>
+
+var d7, r7, r1, r2, r3, r4, r5, r6;
+var a1, a2, a3, a4, a5, a6, a7;
+var alvo, total;
+
+var  x = prompt("Insira a quantidade de alvos.");
+d7 = prompt("Insira o diâmetro do circulo maior.");
+
+r7 = d7/2;  
+r1 = r7/7; 
+r2 = 2 * r1; 
+r3 = 3 * r1;
+r4 = 4 * r1;
+r5 = 5 * r1;
+r6 = 6 * r1;
+
+a1 = Math.PI * r1 * r1;
+a2 = Math.PI * r2 * r2;
+a3 = Math.PI * r3 * r3;
+a4 = Math.PI * r4 * r4;
+a5 = Math.PI * r5 * r5;
+a6 = Math.PI * r6 * r6;
+a7 = Math.PI * r7 * r7;
+
+alvo = a1 + a2 + a3 + a4 + a5 + a6 + a7;
+total = alvo * x;
+document.write("A área total para " + x + " alvos é: " + total);
+ 
+
+</script>

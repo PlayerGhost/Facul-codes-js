@@ -1,0 +1,36 @@
+<script>
+
+function remove (a, s)
+{
+	var p, i, j;
+	if(s) for(i = a.length; i > 1;)
+	{
+		if(a[--i] === a[i - 1])
+		{
+			for(p = i - 1; p-- && a[i] === a[p];);
+		i -= a.splice(p + 1, i - p - 1).length;
+		}
+	}
+	else for(i = a.length; i;)
+	{
+		for(p= --i; p > 0;)
+			if(a[i] === a[--p])
+			{
+				for(j = p; p-- && a[i] === a[p];);
+				i -= a.splice(p + 1, j - p).length;
+			}
+	}
+	return a;
+};
+
+
+var a = [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9];
+
+document.write(a + "<br>");
+
+var a = remove;
+
+document.write(a);
+
+
+</script>

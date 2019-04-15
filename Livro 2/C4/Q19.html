@@ -1,0 +1,35 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 19</title>
+</head>
+<body>
+	<script>
+		function homem ()
+		{
+			var c = Math.round((72.7 * a) - 58);
+			document.write("O seu peso ideal é " + c + "kg");
+		}
+
+		function mulher ()
+		{
+			var c = Math.round((62.1 * a) - 44.7);
+			document.write("O seu peso ideal é " + c + "kg");
+		}
+		var a = parseFloat(prompt("Informe a sua altura. OBS: coloque ponto ao invés de vírgula"));
+		var s = prompt("Informe o seu sexo (H - homem / M - mulher)");
+		if (s == "H")
+		{
+			homem();
+		}
+		else if (s == "M")
+		{
+			mulher();
+		}
+
+
+	</script>
+
+</body>
+</html>

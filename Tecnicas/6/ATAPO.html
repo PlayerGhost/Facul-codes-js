@@ -1,0 +1,40 @@
+<meta charset = "UTF = 8">
+
+<script>
+var v = [10, 12, 20, 23, 27, 30, 31, 39, 42, 44, 45, 57, 63, 70];
+var n = v.length;
+var x = prompt("Entre com o valor que está procurando.");
+
+
+
+
+	var found = false;
+	var l = 1;
+	var r = n;
+
+
+while(!found && l < r)
+{
+	var m = (l + r) / 2;
+		if(x == v[m])
+		{
+			found = true;
+		}
+			else if (x < v[m])
+		{
+			r = m;
+		}
+			else 
+		{
+			l = m + 1;
+		}
+}
+	if (found = true)
+	{ 
+		alert("SHAZAM GARAI!!!!");
+	}
+	if if (found = false)
+	{
+		alert("VOILÁ");
+	}
+</script>

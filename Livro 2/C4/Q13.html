@@ -1,0 +1,49 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 13</title>
+</head>
+<body>
+	<script>
+		var p = parseFloat(prompt("Informe o preço do produto."));
+		var a;
+		var c;
+		var np;
+		if (p <= 50)
+		{
+			a = (5 / 100) * p;
+		}
+		else if (p > 50 && p <= 100)
+		{
+			a = (10 / 100) * p;
+		}
+		else
+		{
+			a = (15 / 100) * p;
+		}
+
+		np = p + a;
+
+		if (np <= 80)
+		{
+			c = "Barato";
+		}
+		else if (np > 80 && np <= 120)
+		{
+			c = "Normal";
+		}
+		else if (np > 120 && np <= 200)
+		{
+			c = "Caro";
+		}
+		else
+		{
+			c = "Muito caro";
+		}
+
+		document.write("O novo preço do seu produto é de R$ " + np + " e a classifição é: " + c);
+	</script>
+
+</body>
+</html>

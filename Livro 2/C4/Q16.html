@@ -1,0 +1,36 @@
+<META CHARSET = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 16</title>
+</head>
+<body>
+	<script>
+		var p = parseFloat(prompt("Informe o valor atua do produto."));
+		var c = prompt("Informe o código do produto.");
+		var d;
+		var np;
+
+		if(p <= 30)
+		{
+			d = 0;
+		}
+
+		else if (p > 30 && p <= 100)
+		{
+			d = 10 / 100 * p;
+		}
+
+		else
+		{
+			d = 15 / 100 * p;
+		}
+
+		np = p - d;
+		document.write("O valor do desconto é de R$ " + d + "<br>");
+		document.write("O novo preço é R$ " + np);
+
+	</script>
+
+</body>
+</html>

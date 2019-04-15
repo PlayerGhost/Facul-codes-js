@@ -1,0 +1,32 @@
+<script>
+var produtos = new Array(5);
+var preco = new Array(10);
+var soma = 0;
+var maior;
+
+for (var i = 0; i < preco.length; i++)
+{
+	preco[i] = parseFloat(prompt("Digite o preço do " + ( i+1) + " produto."));
+	document.write("O preço do produto " + (i+1) + " é de " + preco[i] + "<br>");
+}
+document.write("<hr>");
+
+for (var x = 0; x < produtos.length; x++)
+{
+	produtos[x] = new Array(10);
+	maior = produtos[x][0];
+		for ( var y = 0; y < produtos[x].length; y++)
+		{
+			produtos[x][y] = parseFloat(prompt("Informe a quantidade do produto " + (y+1) + " no " + (x+1) + " armazém."));
+			soma += produtos[x][y];
+			if(maior < produtos[x][y])
+			{
+				maior = produtos[x][y];
+			}
+			document.write("A quantidade do produto " + (y+1) + " no armazém " + (x+1) + " é de " + produtos[x][y] + "<br>");
+		}
+		document.write("<hr>");
+		document.write("O preço do produto que está armazenado com a maior quantidade no armazém " + x + " é de " + maior);
+}
+document.write("Tem um total de " + soma + " produtos");
+</script>

@@ -1,0 +1,34 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 20</title>
+</head>
+<body>
+	<script>
+		function print(frase)
+		{
+			document.write(frase + "<br>");
+		}
+		var ab = parseFloat(prompt("Informe a medida do ângulo formado pela escada apoiada no chão."));
+		var b = parseFloat(prompt("Informe a distância em que a escada está da parede."));
+
+		var h = b / Math.cos(ab);
+			if (h < 0)
+			{
+				h = h * (-1);
+			}
+
+		var a = Math.sqrt(Math.pow(h, 2) - Math.pow(b, 2));
+		var al = 180 - (90 + ab);
+
+		print("A medida da escada é " + h);
+		print("A altura da escada é " + a);
+		print("Os três ângulos do triângulo são: 90, " + ab + ", " + al + " graus.");
+
+
+		
+	</script>
+
+</body>
+</html>

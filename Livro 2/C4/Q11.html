@@ -1,0 +1,35 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 11</title>
+</head>
+<body>
+	<script>
+		var s = parseFloat(prompt("Informe o seu salário atual."));
+		var a;
+		var ns;
+
+		if (s <= 300)
+		{
+			a = (15 / 100) * s;
+		}
+		else if(s > 300 && s < 600)
+		{
+			a = (10 / 100) * s;
+		}
+		if (s >= 600 && s <= 900)
+		{
+			a = (5 / 100) * s;
+		}
+		else if (s > 900)
+		{
+			a = 0;
+		}
+		ns = s + a;
+		document.write("O seu aumento é de R$ " + a + "<br>");
+		document.write("O seu novo salário é de R$ " + ns);
+	</script>
+
+</body>
+</html>

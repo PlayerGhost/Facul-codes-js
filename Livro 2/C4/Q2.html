@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questão 2</title>
+</head>
+<body>
+	<script>
+		function print (frase)
+		{
+			document.write(frase);
+		}
+		var a = parseFloat(prompt("Informe a primeira nota."));
+		var b = parseFloat(prompt("Informe a segunda nota."));
+
+		var m = (a + b) / 2;
+
+		if(m < 3)
+		{
+			print("Reprovado");
+		}
+		else if (m > 3 && m < 7)
+		{
+			print("Exame");
+		}
+
+		if (m > 7 && m < 10)
+		{
+			print("Aprovado");
+		}
+	</script>
+
+</body>
+</html>

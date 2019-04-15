@@ -1,0 +1,43 @@
+ <script>
+ 
+var nota = new Array(15);
+var aluno = new Array(15);
+var media = new Array(15);
+var estado = new Array(15);
+var mediaClasse = (media[i] + media[i]) / 15;
+
+
+
+for (var i = 0; i < 15; i++)
+{
+	nota[i] = new Array(5);
+	
+	aluno[i] = prompt("Insira o nome do aluno " + (i+1) + ".");
+	
+		
+		for(var j = 0; j < 5; j++)
+		{
+			nota[i][j] = prompt("Insira a nota do aluno " + aluno[i] + ", na prova " + (j+1) + " .");
+		}
+	media[i] = (nota[i][j] + [j]) / 5;
+		
+	if(media[i] >= 7)
+	{
+		document.write("O aluno foi aprovado.");
+	}
+	else if(4 >= media[i] < 7)
+	{
+		document.write("O aluno ainda está em exame.");
+	}
+	if(media[i] > 4)
+	{
+		document.write("O aluno foi reprovado.");
+	}
+	
+}
+ 
+document.write("A media da classe foi " + mediaClasse);
+ 
+ 
+ 
+ </script>

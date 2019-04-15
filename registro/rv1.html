@@ -1,0 +1,47 @@
+<meta xcharset = "UTF-8">
+<script>
+
+var p = new Array(3);
+
+for (var i = 0; i < p.length; i++)
+{
+	p[i] = {
+		salario : parseFloat(prompt("Qual o seu salário?")),
+		idade : parseInt(prompt("Qual a sua idade?")),
+		filhos : parseInt(prompt("Quantos filhos você tem?")),
+		sexo : prompt("Qual o seu sexo? (Digite em Caps Lock)")
+	}
+}
+
+var soma_salario = 0;
+var soma_filhos = 0;
+var ms = p[0].salario;
+var cont_m = 0;
+var cont_m_mil = 0;
+var pmMil = parseFloat(cont_m_mil / cont_m);
+
+for (var i = 0; i < p.length; i++)
+{
+	soma_salario += p[i].salario;
+	soma_filhos += p[i].filhos;
+	
+	if (p[i].salario > ms)
+	{
+		ms = p[i].salario
+	}
+	if (p[i].sexo == "MULHER")
+	{
+		cont_m++;
+	}
+	if (p[i].sexo == "MULHER" && p[i].salario > 1000)
+	{
+		cont_m_mil++;
+	}
+	
+}
+document.write("A média de salário da população é: " + "<br>");
+document.write("A média do número de filhos é: " + "<br>");
+document.write("O maior salário é: R$" + ms +  "<br>");
+document.write("O percentual de mulheres com salário superior a R$ 1.000,00 é: " + pmMil +"%" );
+
+</script>
