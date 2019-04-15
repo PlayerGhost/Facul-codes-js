@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculo da função seno</title>
+</head>
+<body>
+	<script>
+		function fatorial (n)
+		{
+			var fat = 1;
+			for (i = n; i >= 1; i--)
+			{
+				fat = fat * i;
+			}
+			return fat;
+		}
+
+		var x = parseInt(prompt("Insira o valor de x."));
+		var qt = parseInt(prompt("Informe a quantidade de termos."));
+
+		var senx = 0;
+		var term;
+		var s = 1;
+		var y = 1;
+		for (i = 1; i <= qt; i++)
+		{
+			term = Math.pow(x, y) / fatorial(y);
+			senx = senx + s * term;
+			s = -1 * s;
+			y = y + 2;
+		}
+
+		document.write(senx.toFixed(2));
+
+	</script>
+
+</body>
+</html>

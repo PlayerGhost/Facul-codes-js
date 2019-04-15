@@ -1,0 +1,27 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cálculo do fatorial</title>
+</head>
+<body>
+	<script>
+		var n = parseFloat(prompt("Informe o número a ser calculado o fatorial."));
+		var fat = 1;
+
+		if (n < 0)
+		{
+			document.write("O número não pode ser menor que 0");
+		}
+		else
+		{
+			for (i = 1; i <= n; i++)
+			{
+				fat = fat * i;
+			}
+			document.write("N! = " + fat);
+		}
+	</script>
+
+</body>
+</html>
