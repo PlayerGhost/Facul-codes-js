@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inverter</title>
+</head>
+<body>
+	<script>
+		var n = prompt("Informe um número inteiro.");
+		var c, x = 0;
+
+		while(n > 0)
+		{
+			c =  n % 10;
+			x = x * 10 + c;
+			n = parseInt(n / 10);
+		}
+
+		document.write(x);
+	</script>
+
+</body>
+</html>

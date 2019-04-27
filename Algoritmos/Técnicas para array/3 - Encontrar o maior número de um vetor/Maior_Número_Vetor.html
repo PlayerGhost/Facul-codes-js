@@ -1,0 +1,32 @@
+<meta charset = "UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maior número de um vetor</title>
+</head>
+<body>
+	<script>
+		var vs;
+		var x = [];
+		var m = 0;
+
+		var vs = prompt("Informe a quantidade de números do vetor.");
+
+		for (i = 0; i < vs; i++)
+		{
+			x[i] = parseFloat(prompt("Informe um número."));
+		}
+
+		for (i = 0; i < x.length; i++)
+		{
+			if (x[i] > m)
+			{
+				m = x[i];
+			}
+		}
+
+		document.write("O maior número do vetor é " + m);
+	</script>
+
+</body>
+</html>

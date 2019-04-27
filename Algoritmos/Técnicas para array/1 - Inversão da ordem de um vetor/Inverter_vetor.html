@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inverter vetor</title>
+</head>
+<body>
+	<script>
+		var x = [1, 2, 3, 4, 5];
+		var y = [];
+		var c = 0;
+		for(i = x.length; i >= 0; i--)
+		{
+			y[c] = x[i];
+			c++;
+		}
+		document.write("Normal {" + x + "}" + "<br>");
+		document.write("Invertido {" + y + "}");
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Histograma</title>
+</head>
+<body>
+	<script>
+		var nq = prompt("Informe a quantidade de notas.");
+		var n;
+		var c = [];
+		for (i = 0; i <= 100; i++)
+		{
+			c[i] = 0;
+		}
+
+		for (i = 0; i < nq; i++)
+		{
+			n = parseFloat(prompt("Informe a nota."));
+			c[n] += 1;
+		}
+
+		for (i = 0; i <= c.length-1; i++)
+		{
+			if(c[i] != 0)
+			{
+				document.write("Nota: " + i + " - Quantidade: " + c[i] + "<br>");
+			}
+		}
+
+	</script>
+
+</body>
+</html>
