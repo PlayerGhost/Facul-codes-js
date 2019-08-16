@@ -1,0 +1,22 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversão de caractere para número</title>
+</head>
+<body>
+	<script>
+		var x = prompt("Informe a representação a ser convertida.");
+		var a ;
+		var b;
+
+		for (i = 0; i < x.length; i++)
+		{
+			a = x.charCodeAt(i);
+			b = String.fromCharCode(a);
+			document.write(b);
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversão de caractere para número</title>
+</head>
+<body>
+	<script>
+		var x = prompt("Informe a representação a ser convertida.");
+		var a = [];
+		var b = [];
+
+		for (i = 0; i < x.length; i++)
+		{
+			a[i] = x.charCodeAt(i);
+			b[i] = String.fromCharCode(a[i]);
+		}
+
+		document.write("O formato decimal convencional é " + b);
+	</script>
+
+</body>
+</html>
