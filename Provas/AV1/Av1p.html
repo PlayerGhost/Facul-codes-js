@@ -1,0 +1,76 @@
+<meta charset = "utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Av1</title>
+</head>
+<body>
+	<script>
+		
+
+		//ENTRADA
+		var preco = parseFloat(prompt("Informe o preço unitário do produto."));
+		var pais = parseInt(prompt("Informe o país de origem, sendo: 1 - Estados Unidos, 2 - México e 3 - outros."));
+		var tran = prompt("Informe o seu meio de transporte, sendo: T - terrestre, F - fluvial e A - aéreo ");
+		 var c = prompt("A carga é perigora? (S - sim / N - não)");
+		 var tax;
+		 var vtran;
+		 var seg = 0;
+
+
+		 //IMPOSTO
+		 if(preco <= 100)
+		 {
+		 	tax = 5 / 100 * preco;
+		 	document.write("O valor do imposto sera R$ " + tax + "<br>");
+		 }
+		 else
+		 {
+		 	tax = 10 / 100 * preco;
+		 	document.write("O valor do imposto sera R$ " + tax + "<br>");
+		 }
+
+		 //VALOR DO TRANSPORTE
+		 if (c == "S" && pais == 1)
+		 {
+		 	vtran = 50;
+		 }
+		 else if (c == "S" && pais == 2)
+		 {
+		 	vtran = 21;
+		 }
+		 if (c == "S" && pais == 3)
+		 {
+		 	vtran = 24;
+		 }
+
+		 if (c == "N" && pais == 1)
+		 {
+		 	vtran = 12;
+		 }
+		 else if (c == "N" && pais == 2)
+		 {
+		 	vtran = 21;
+		 }
+		 if (c == "N" && pais == 3)
+		 {
+		 	vtran = 60;
+		 }
+		 document.write("O valor do tranporte sera R$ " + vtran + "<br>");
+		 //VALOR DO SEGURO
+		 if (pais == 2)
+		 {
+		 	seg = preco / 2;
+		 }
+		 if (tran == "A")
+		 {
+		 	seg = preco / 2;
+		 }
+		 document.write("O valor do seguro é R$ " + seg + "<br>");
+
+		 //SAÍDA
+		 document.write("O preço fina é R$ " + (preco + tax + vtran + seg));
+	</script>
+
+</body>
+</html> 
