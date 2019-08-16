@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intercalação Bidirecional</title>
+</head>
+<body>
+	<script>
+		var x = [8, 11, 16, 17, 44, 58, 71, 74];
+		var y = [15, 18, 42, 51];
+		var z = [];
+		var aux = x.length + y.length;
+		var c = 0;
+		var c1 = 0;
+
+
+		document.write("Vetor 1 {" + x + "}" + "<br>");
+		document.write("Vetor 2 {" + y + "}" + "<br>");
+
+		for (i = 0; i < aux; i++)
+		{
+			if (x[c] < y[c1] || c1 == y.length)
+			{
+				z[i] = x[c];
+				c++;
+			}
+			else
+			{
+				z[i] = y[c1];
+				c1++;
+			}
+		}
+
+		document.write("Intercalação Bidirecional {" + z + "}");
+	</script>
+</body>
+</html>

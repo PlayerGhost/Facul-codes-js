@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ordenação por troca - Bubble Sort</title>
+</head>
+<body>
+	<script>
+		var x = [20, 35, 18, 8, 14, 41, 3, 39];
+		var aux;
+
+		document.write("Vetor original = {" + x +"}" + "<br>");
+
+		for (i = 0; i < x.length-1; i++)
+		{
+			for (j = 0; j < x.length-1-i; j++)
+			{
+				if (x[j] > x[j+1])
+				{
+					aux = x[j];
+					x[j] = x[j+1];
+					x[j+1] = aux;
+				}
+			}
+		}
+
+		document.write("Vetor ordenado = {" + x +"}");
+	</script>
+
+</body>
+</html>

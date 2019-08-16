@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ordenação por seleção</title>
+</head>
+<body>
+	<script>
+		function comp (a, b)
+		{
+			if (a > b) return 1
+			if (b > a) return -1
+		}
+
+		var x = [3, 5, 7, 8, 2, 4,];
+
+		document.write("Vetor originnal {" + x + "}" + "<br>");
+
+		x.sort(comp);
+
+		document.write("Vetor ordenado {" + x + "}");
+
+
+	</script>
+
+</body>
+</html>
