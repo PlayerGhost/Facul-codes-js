@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>\Simulado 1</title>
+</head>
+<body>
+	<script>
+		var ta;
+		var pc = [];
+		var pv = [];
+		var rcv = [];
+		var rt = 0;
+
+		var j = 0; 
+		var c = 0;
+		var co = 0;
+
+		while (ta != "F")
+		{
+			ta = prompt("Informe o tipo da ação.");
+			pc[j] = parseFloat(prompt("Informe o preço de compra."));
+			pv[j] = parseFloat(prompt("Informe o preço de venda."));
+			j++;
+
+			if (ta == "F")
+			{
+				pc[j] = 0;
+				pv[j] = 0;
+			}
+		}
+
+		for (i = 0; i <= pc.length; i++)
+		{
+			rcv[i] = 0;
+			rcv[i] = pv[i] - pc[i];
+			rt += rcv[i];
+
+
+			if(rcv[i] > 0)
+			{
+				c++;
+				alert("O resultado é " + rcv[i] + " e Você lucrou.");
+			}
+
+			if(rcv[i] < 0)
+			{
+				co++;
+				alert("O resultado é " + rcv[i] + " e Você teve prejuízo.");
+			}
+		}
+
+		document.write(c + " Ação(ões) tiveram lucro." + "<br");
+		document.write(co + " Ação(ões) tiveram prejuízo." + "<br");
+
+		if(rt > 0)
+		{
+			document.write("O seu resultado total é de R$ " + rt + "Parabéns pelo seu lucro.");
+		}
+
+		if(rt < 0)
+		{
+			document.write("O seu resultado total é de R$ " + rt + "Infelizmente, você teve prejuízo.");
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
