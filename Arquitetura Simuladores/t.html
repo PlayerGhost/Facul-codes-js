@@ -1,0 +1,65 @@
+<meta charset = "utf-8">
+<script>
+	// Entrada
+	var bin = prompt("Insira a cadeia de 32 números binários.");
+
+	//Separar a mantissa, separar, converter para decimal e calcular o expoente
+	var exp = parseInt(bin.substring(1, 9), 2) - 127;
+	var man = bin.slice(9);
+
+	//Separar a parte inteira e a fracionária do número, atráves da mantissa e do resultado do cálculo do expoente
+	var int = "1" + man.substring(0, exp);
+	var fra = man.slice(exp);
+
+	//Conversão de binário para decimal (Armazenamento)
+	var dec = 0;
+
+	//contadores
+	var cont = 0;
+	var cont1 = 0;
+
+	//Descobrir se o número é positivo ou negativo	
+	var sinal;
+
+	for (i = 0; i < bin.length; i++)
+	{
+		if (bin[0] == "0")
+	    {
+		   sinal = "+";
+	    }
+	    
+	    else
+	    {
+		   sinal = "-";
+	    }
+	}
+	
+	document.write(sinal);
+
+	// Converter a parte inteira do número binario para decimal e armazenar
+	for (i = int.length-1; i >= 0; i--)
+	{	
+		if(int[i] == "1")
+		{
+			dec += Math.pow(2, cont);
+		}
+		cont++;
+	}
+
+	//Converter a parte fracionária do número binário para decimal e armazenar na mesma variável da conversão da parte inteira
+	for (i = 0; i <= fra.length; i++)
+	{
+		cont1--;
+		if(fra[i] == "1")
+		{
+			dec += Math.pow(2, cont1);
+		}
+	}
+
+	 
+	//Saída em notação cientifica
+	document.write(dec.toExponential().replace(".", ",") + "<br>");
+	
+	
+
+</script>
